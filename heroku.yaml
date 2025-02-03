@@ -1,7 +1,17 @@
+setup:
+  addons:
+    - plan: heroku-postgresql:hobby-dev
+      as: DATABASE
+
 build:
   docker:
-    web: app/Dockerfile
-  docker:
-    web: app/src/Dockerfile  
+    backend:
+      dockerfile: backend/Dockerfile
+    frontend:
+      dockerfile: frontend/src/Dockerfile
+release:
+  command:
+    - echo "Release step for backend"
+    - echo "Release step for frontend"
 run:
-  web: bundle exec puma -C config/puma.rb
+  web: docker-compose up
