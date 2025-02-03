@@ -1,17 +1,14 @@
-setup:
-  addons:
-    - plan: heroku-postgresql:hobby-dev
-      as: DATABASE
-
 build:
   docker:
-    backend:
+    backend: 
       dockerfile: backend/Dockerfile
+      context: backend
     frontend:
-      dockerfile: frontend/src/Dockerfile
+      dockerfile: todo-frontend/src/Dockerfile
+      context: todo-frontend
 release:
   command:
-    - echo "Release step for backend"
-    - echo "Release step for frontend"
+    - "backend: python manage.py migrate" # Adjust if not using Django or migrations
 run:
-  web: docker-compose up
+  backend: "uvicorn main:app" # Adjust based on how you run the backend (e.g., Flask, FastAPI)
+  frontend: "npm start"   # Or replace with how your frontend starts
