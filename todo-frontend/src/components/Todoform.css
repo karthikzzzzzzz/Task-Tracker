@@ -1,0 +1,147 @@
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-image: radial-gradient( circle farthest-corner at 3.7% 49.8%,  rgba(143,232,255,1) 21.9%, rgba(209,243,251,1) 52.9% );
+}
+
+.inner-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.add-button {
+    padding: 10px 20px;
+    background-color: #6A5ACD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #00aeff;
+}
+
+.task{
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease
+}
+
+
+.task-container:hover {
+    background-color: #f1f1f1;
+}
+
+.delete-button {
+    background-color: #6A5ACD;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 96.5% );
+}
+
+.task-title{
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.task-checkbox{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .inner-container {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    .input-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .add-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .task-container {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 10px; 
+    }
+
+    .task-title {
+        font-size: 14px; 
+        margin-bottom: 10px;
+    }
+
+    .task-checkbox {
+        margin-right: 5px; 
+    }
+
+    .delete-button {
+        margin-top: 5px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .input-container {
+        width: 80%; 
+    }
+
+    .add-button {
+        width: 18%; 
+    }
+}

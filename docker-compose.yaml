@@ -1,0 +1,31 @@
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    networks:
+      - faq-assistant-net
+
+  frontend:
+    build:
+      context: ./todo-frontend
+      dockerfile: src/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+    env_file:
+      - .env 
+    networks:
+      - faq-assistant-net
+
+networks:
+  faq-assistant-net:
+    driver: bridge
