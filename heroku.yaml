@@ -1,4 +1,5 @@
 build:
   docker:
-    web: ./todo-frontend/src/Dockerfile   # Path to the frontend Dockerfile
-    backend: ./backend/Dockerfile        # Path to the backend Dockerfile
+    web: Dockerfile
+run:
+  web: bundle exec puma -C config/puma.rb
