@@ -18,11 +18,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./todo-frontend:/app
     depends_on:
       - backend
-    env_file:
-      - .env 
     networks:
       - faq-assistant-net
 
