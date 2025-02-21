@@ -2,6 +2,10 @@
 
 A simple task tracking application.
 
+
+<img width="1437" alt="Screenshot 2025-02-21 at 7 17 09 PM" src="https://github.com/user-attachments/assets/a8c3c029-2282-491c-9019-d0084b4ffa06" />
+
+
 ## Features
 - Create, update, and delete tasks.
 - Mark tasks as complete.
